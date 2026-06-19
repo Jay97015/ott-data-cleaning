@@ -1,19 +1,32 @@
-# ott-data-cleaning
+#  Data Portfolio: Analytics & Algorithms
 
-# 🎬 OTT Entertainment Data Cleaning Project
-
-## 📌 Project Overview
-Data cleaning is the foundation of reliable data analysis. In this project, I simulated a raw, real-world "Streaming Analytics" dataset (like Netflix or Squid Game data) that contained common tracking issues: duplicates, inconsistent text formatting, corrupted date entries, and missing values. 
-
-Using **Python** and **Pandas**, I systematically cleaned the dataset to ensure its accuracy, showcasing how "dirty data" can distort business metrics if left untreated.
+Welcome to my portfolio! This repository showcases my transition from foundational data cleaning techniques into core computer science concepts like Data Structures and Algorithms (DSA).
 
 ---
 
-## 🛠️ The Data Issues & How I Solved Them
+##  Project 1: OTT Entertainment Data Cleaning
+Data cleaning is the foundation of reliable data analysis. In this project, I simulated a raw "Streaming Analytics" dataset containing tracking duplicates, inconsistent casing, and missing values, and cleaned it systematically using Python and Pandas.
 
+###  The Data Issues & How I Solved Them
 | Column Affected | The Problem | The Impact | The Technical Fix (Pandas) |
 | :--- | :--- | :--- | :--- |
-| **Title** | Duplicate records for the same show. | Overinflated total viewership numbers by 20%. | `.drop_duplicates()` |
-| **Category** | Mixed casing (`TV Show` vs `tv show`). | Broken aggregations; metrics would split the same group. | `.str.title()` |
-| **Release_Date**| Messy text-string dates. | Impossible to track chronological trends or timeline plots. | `pd.to_datetime()` |
-| **Director** | Null / Missing entry values. | Deleting rows completely would discard other valid data points. | `.fillna('Unknown Director')` |
+| **Title** | Duplicate records. | Overinflated total metrics by 20%. | `.drop_duplicates()` |
+| **Category** | Mixed casing (`tv show`). | Broken data aggregations. | `.str.title()` |
+| **Release_Date**| Messy text-string dates. | Impossible to track timelines. | `pd.to_datetime()` |
+| **Director** | Null / Missing fields. | Row deletion would discard valid data. | `.fillna('Unknown')` |
+
+---
+
+##  Project 2: Efficient Processing with Binary Search (DSA)
+As datasets grow into millions of rows, scanning data row-by-row becomes too slow. This project implements **Binary Search**—a core algorithm designed to search sorted lists with maximum performance.
+
+###  Concept Strategy
+Instead of inspecting items sequentially ($O(N)$ time complexity), Binary Search cuts the data space in half with each iteration ($O(\log N)$ time complexity). 
+
+* **File Implemented:** `binary_search.py`
+* **Use Case:** Instantly looking up specific User IDs from a sorted dataset.
+* **Key Terms Handled:** Divide and conquer, mid-point evaluation, pointers (`left`, `right`).
+
+---
+
+A great data professional doesn't just clean the data—they understand how to manipulate and retrieve it with peak efficiency.
